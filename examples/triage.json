@@ -1,0 +1,1 @@
+{"intent": {"type": "choice", "options": ["billing", "bug", "cancel", "shipping", "account", "other"]}, "urgency": {"type": "score"}, "needs_human": {"type": "noul"}}

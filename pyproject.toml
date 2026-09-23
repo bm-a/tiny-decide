@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiny-decide"
+version = "0.1.0"
+description = "5MB offline decision engine: typed choice/score/yes-no in one pass, <5ms CPU, no API key. Jev-compatible."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "tiny-decide contributors"}]
+keywords = ["nlp", "intent", "triage", "offline", "jev", "system-one", "edge"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: Apache Software License",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+serve = []
+dev = ["pytest"]
+
+[project.scripts]
+tiny-decide-serve = "tiny_decide.serve:main"
+tiny-decide = "tiny_decide.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tiny_decide*"]
